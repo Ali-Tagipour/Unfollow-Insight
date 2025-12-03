@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.UnfollowInsight" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+
+    <!-- Main theme -->
+    <style name="Theme.UnfollowInsight" parent="Base.Theme.UnfollowInsight" />
+
+    <!-- NoActionBar theme (used in manifest) -->
+    <style name="Theme.UnfollowInsight.NoActionBar" parent="Base.Theme.UnfollowInsight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
