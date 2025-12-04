@@ -3,29 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/appBackground">
+    android:background="#0D0D0D"
+    android:padding="24dp">
 
+    <!-- عنوان -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="لیست کسانی که شما را فالو نکرده‌اند"
-        android:textSize="18sp"
+        android:text="کسانی که فالوت نکردن"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/primaryText"
-        android:layout_marginBottom="12dp" />
+        android:textColor="#FF5252"
+        android:layout_marginBottom="12dp"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/dividerColor"
-        android:layout_marginBottom="12dp" />
+    <!-- تعداد -->
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="۰ نفر"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#E91E63"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp"/>
 
+    <!-- لیست -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="4dp"/>
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:background="#111111"
+        android:overScrollMode="never"/>
+
+    <!-- پیام خالی بودن لیست -->
+    <TextView
+        android:id="@+id/textEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="هیچ آنفالوئری پیدا نشد!\nمطمئن شو فایل درست انتخاب شده."
+        android:textSize="17sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:visibility="gone"/>
+
 </LinearLayout>
