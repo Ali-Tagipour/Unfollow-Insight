@@ -8,82 +8,95 @@
     android:background="#0D0D0D"
     android:padding="32dp">
 
-    <!-- لوگو -->
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:src="@drawable/ggg"
-        android:background="#E91E63"
-        android:padding="28dp"
-        android:layout_marginBottom="32dp" />
+    <!-- لوگو مدرن با کارت گرد و elevation -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#E91E63"
+        android:layout_marginBottom="48dp">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ggg"
+            android:scaleType="centerInside"
+            android:padding="32dp" />
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="آنفالو اینسایت"
-        android:textSize="38sp"
+        android:textSize="42sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="کشف کسانی که فالوت نکردن"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:textColor="#FF5252"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="56dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="برای شروع، فایل ZIP دیتای اینستاگرامت رو که از تنظیمات > حریم خصوصی و امنیت > دانلود داده‌ها گرفتی، انتخاب کن."
-        android:textSize="15sp"
-        android:textColor="#AAAAAA"
+        android:textSize="16sp"
+        android:textColor="#CCCCCC"
         android:gravity="center"
-        android:lineSpacingExtra="6dp"
-        android:layout_marginBottom="48dp"
-        android:paddingHorizontal="16dp"/>
+        android:lineSpacingExtra="10dp"
+        android:layout_marginBottom="64dp"
+        android:paddingHorizontal="24dp"/>
 
-    <!-- فقط این دو خط رو با app: عوض کردم -->
+    <!-- دکمه انتخاب فایل ZIP - اصلی و پررنگ -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_select_json"
+        style="@style/Widget.Material3.Button"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="wrap_content"
+        android:minHeight="62dp"
         android:text="انتخاب فایل ZIP"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
         app:backgroundTint="#E91E63"
         app:icon="@android:drawable/ic_menu_upload"
-        app:iconGravity="start"
+        app:iconGravity="textStart"
         app:iconPadding="16dp"
         app:iconTint="#FFFFFF"
-        android:layout_marginBottom="16dp"
-        style="@style/Widget.MaterialComponents.Button"/>
+        app:cornerRadius="28dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_marginBottom="20dp"/>
 
+    <!-- دکمه شروع تحلیل - کاملاً موجود و با استایل Tonal مدرن -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_analyze"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="wrap_content"
+        android:minHeight="62dp"
         android:text="شروع تحلیل"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#424242"
         android:enabled="false"
-        android:alpha="0.6"
-        style="@style/Widget.MaterialComponents.Button"/>
+        app:cornerRadius="28dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Made by Ali Taghipour (A.T)"
-        android:textSize="13sp"
+        android:textSize="14sp"
         android:textColor="#666666"
-        android:layout_marginTop="56dp"/>
+        android:layout_marginTop="80dp"/>
 
 </LinearLayout>
